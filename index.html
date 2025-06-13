@@ -270,6 +270,11 @@
       document.getElementById('lid').style.transform = 'rotateX(0deg)';
       document.getElementById('message').classList.remove('visible');
       isOpen = false;
+
+      const audio = document.getElementById("bgm");
+      audio.pause();          // Müziği durdurur
+      audio.currentTime = 0;  // Müziği başa sarar (opsiyonel)
+      hasPlayed = false;      // Tekrar açıldığında yeniden başlatabilmek için      
     }
   </script>
 </body>
